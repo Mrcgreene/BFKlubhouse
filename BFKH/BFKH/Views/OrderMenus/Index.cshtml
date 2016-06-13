@@ -1,0 +1,85 @@
+﻿@model IEnumerable<BFKH.Models.OrderMenu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Menu</h2>
+
+
+<div class="container">
+    <img class="img-rounded" src="/images/pathToYourImage.png" alt="Rounded image">
+    <img class="img-rounded" src="/images/pathToYourImage.png" alt="Rounded image">
+    <img class="img-rounded" src="/images/pathToYourImage.png" alt="Rounded image">
+</div>
+<p>
+    @Html.ActionLink("Create Dish", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="PBS5JN4UEK6KC">
+    <table>
+        <tr><td><input type="hidden" name="on0" value="Order Here!">Order Here!</td></tr>
+        <tr>
+            <td>
+                <select name="os0">
+                    <option value="Catfish Fillets">Catfish Fillets $11.99 USD</option>
+                    <option value="Butterfly Shrimp">Butterfly Shrimp $10.99 USD</option>
+                    <option value="Chicken Wings">Chicken Wings $7.99 USD</option>
+                    <option value="Fish Tacos">Fish Tacos $5.99 USD</option>
+                    <option value="Vegetarian Wraps">Vegetarian Wraps $7.99 USD</option>
+                    <option value="Boneless Wings">Boneless Wings $5.99 USD</option>
+                    <option value="Chili Cheese Fries">Chili Cheese Fries $5.99 USD</option>
+                    <option value="Fried Tomatoes">Fried Tomatoes $3.99 USD</option>
+                    <option value="Baked Salmon">Baked Salmon $9.99 USD</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+<p> All dishes are...</p>
