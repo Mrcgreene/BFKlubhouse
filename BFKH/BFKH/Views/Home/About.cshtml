@@ -2,13 +2,7 @@
     ViewBag.Title = "About Us";
 }
 <h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
-
-<p>
-    Started by two bestfriendz and the atmosphere of Best Friendz Klubhouse is exactly that... friendly. Like Cheers said, "...sometimes you wanna go where everybody knows your name." A place where you can kick back, have a drink and just be you.
-
-    Hurry down today, we've got a chair waiting on you
-</p>
+@*<h3>@ViewBag.Message</h3>*@
 
 <head>
     <meta charset="UTF-8" />
@@ -96,7 +90,17 @@
         }
     </style>
 </head>
+
+<p>
+    It was all started by two bestfriendz and the atmosphere of Best Friendz Klubhouse is exactly that... friendly. Like Cheers said, "...sometimes you wanna go where everybody knows your name." A place where you can kick back, have a drink and just be you.
+
+    Hurry down today, we've got a chair waiting on you
+</p>
 <body>
+    <div class="container">
+        <img class="img-rounded" src="/images/pathToYourImage.png" alt="Rounded image">
+        <img class="img-rounded" src="/images/pathToYourImage.png" alt="Rounded image">
+    </div>
     <h2>Directions to Best Friendz Klubhouse</h2>
     <form id="calculate-route" name="calculate-route" action="#" method="get">
         <label for="from">From:</label>

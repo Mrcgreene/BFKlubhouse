@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/fullcalendarcss")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -26,7 +27,7 @@
                     <li>@Html.ActionLink("Food Inventory", "Index", "FoodInvs")</li>
                     <li>@Html.ActionLink("Alcohol Inventory", "Index", "AlcoholInvs")</li>
                     <li>@Html.ActionLink("Supply Inventory", "Index", "SupplyInvs")</li>
-                    <li>@Html.ActionLink("Scheduler", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Scheduler", "Index", "Scheduler")</li>
                     <li>@Html.ActionLink("Payouts", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
@@ -44,6 +45,7 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/fullcalendarjs")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
