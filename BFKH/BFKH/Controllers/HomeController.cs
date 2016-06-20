@@ -22,7 +22,14 @@ namespace BFKH.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "";
+
+            return View();
+        }
+
+        public ActionResult Test()
+        {
+            ViewBag.Message = "";
 
             return View();
         }

@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Food Inventory</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add Item", "Create")
 </p>
 <table class="table">
     <tr>
@@ -44,7 +44,20 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
+            @if (item.Quantity <= item.purchaseLevel)
+                {
+                <p style="color: red">@item.Quantity</p>
+
+            }
+            else if (item.Quantity <= item.warningLevel)
+            {
+                <p style="color: orange">@item.Quantity</p>
+
+            }
+            else if (item.Quantity >= item.warningLevel)
+            {
+                <p style="color: lawngreen">@item.Quantity</p>
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

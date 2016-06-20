@@ -91,34 +91,37 @@
     </style>
 </head>
 
-<p>
-    It was all started by two bestfriendz and the atmosphere of Best Friendz Klubhouse is exactly that... friendly. Like Cheers said, "...sometimes you wanna go where everybody knows your name." A place where you can kick back, have a drink and just be you.
 
-    Hurry down today, we've got a chair waiting on you
-</p>
 <body>
     <div class="container">
-        <img class="img-rounded" src="/images/pathToYourImage.png" alt="Rounded image">
-        <img class="img-rounded" src="/images/pathToYourImage.png" alt="Rounded image">
-    </div>
-    <h2>Directions to Best Friendz Klubhouse</h2>
-    <form id="calculate-route" name="calculate-route" action="#" method="get">
-        <label for="from">From:</label>
-        <input type="text" id="from" name="from" required="required" placeholder="Your Location" size="30" />
-        <a id="from-link" href="#">Get my position</a>
-        <br />
+        <div class="col-md-6">
+            <img class="img-rounded" src="/images/bestfriends.jpg" alt="Rounded image">
+        </div>
+        <div class="col-md-6">
+            <p>
+                It was all started by two bestfriendz and the atmosphere of Best Friendz Klubhouse is exactly that... friendly. Like Cheers said, "...sometimes you wanna go where everybody knows your name." A place where you can kick back, have a drink and just be you.
 
-        @*<label for="to">To:</label>
-        <input type="text" id="to" name="to" required="required" placeholder="Location" size="30" />
-        <a id="to-link" href="#">Get my position</a>
-        <br />*@
+                Hurry down today, we've got a chair waiting on you!
+            </p>
+            <h3>Get directions to Best Friendz Klubhouse</h3>
+            <form id="calculate-route" name="calculate-route" action="#" method="get">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" required="required" placeholder="Your Location" size="30" />
+                <a id="from-link" href="#">Get my position</a>
+                <br />
 
-        <input type="submit" />
-        <input type="reset" />
-    </form>
-    <div id="map"></div>
-    <p id="error"></p>
+                @*<label for="to">To:</label>
+            <input type="text" id="to" name="to" required="required" placeholder="Location" size="30" />
+            <a id="to-link" href="#">Get my position</a>
+            <br />*@
 
+                <input type="submit" />
+                <input type="reset" />
+            </form>
+            <div id="map"></div>
+            <p id="error"></p>
+        </div>
+        </div>
 </body>
 </html>
 

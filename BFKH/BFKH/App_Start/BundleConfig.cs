@@ -35,8 +35,10 @@ namespace BFKH
             //Calendar Script file
 
             bundles.Add(new ScriptBundle("~/bundles/fullcalendarjs").Include(
+                      "~/Scripts/jquery-{version}.js",                                                      //tester
                       "~/Scripts/jquery-ui-{version}.min.js",
                       "~/Scripts/moment.min.js",
+                      "~/Scripts/bootstrap.js",                                                             //tester
                       "~/Scripts/fullcalendar.min.js"));
         }
     }

@@ -37,5 +37,9 @@ namespace BFKH.Models
         public System.Data.Entity.DbSet<BFKH.Models.AlcoholInv> AlcoholInvs { get; set; }
 
         public System.Data.Entity.DbSet<BFKH.Models.FoodInv> FoodInvs { get; set; }
+
+        public System.Data.Entity.DbSet<BFKH.Models.Employees> Employees { get; set; }
+
+        public System.Data.Entity.DbSet<BFKH.Models.Schedule> Schedules { get; set; }
     }
 }

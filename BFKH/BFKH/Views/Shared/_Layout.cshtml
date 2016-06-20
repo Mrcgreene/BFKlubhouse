@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/fullcalendarcss")
     @Scripts.Render("~/bundles/modernizr")
@@ -24,11 +24,11 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Menu", "Index", "OrderMenus")</li>
                     <li>@Html.ActionLink("Events", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Food Inventory", "Index", "FoodInvs")</li>
-                    <li>@Html.ActionLink("Alcohol Inventory", "Index", "AlcoholInvs")</li>
-                    <li>@Html.ActionLink("Supply Inventory", "Index", "SupplyInvs")</li>
-                    <li>@Html.ActionLink("Scheduler", "Index", "Scheduler")</li>
-                    <li>@Html.ActionLink("Payouts", "Index", "Home")</li>
+                    @*<li>@Html.ActionLink("Food Inventory", "Index", "FoodInvs")</li>*@
+                    @*<li>@Html.ActionLink("Beverage Inventory", "Index", "AlcoholInvs")</li>*@
+                    @*<li>@Html.ActionLink("Supply Inventory", "Index", "SupplyInvs")</li>*@
+                    @*<li>@Html.ActionLink("Scheduler", "Index", "Schedules")</li>*@
+                    @*<li>@Html.ActionLink("Payouts", "Index", "Employees")</li>*@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>

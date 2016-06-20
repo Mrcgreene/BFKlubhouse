@@ -13,5 +13,18 @@ namespace BFKH.Controllers
         {
             return View();
         }
+
+        public ActionResult Create()
+        {
+            if (ModelState.IsValid)
+            {
+              
+
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
     }
 }

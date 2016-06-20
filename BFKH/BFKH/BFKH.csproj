@@ -234,11 +234,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlcoholInvsController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\FoodInvsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderMenusController.cs" />
     <Compile Include="Controllers\SchedulerController.cs" />
+    <Compile Include="Controllers\SchedulesController.cs" />
     <Compile Include="Controllers\SupplyInvsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -267,13 +269,35 @@
     <Compile Include="Migrations\201606131612117_correct code migration.Designer.cs">
       <DependentUpon>201606131612117_correct code migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606141948266_created employee model.cs" />
+    <Compile Include="Migrations\201606141948266_created employee model.Designer.cs">
+      <DependentUpon>201606141948266_created employee model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606141957581_correct code migration error attempt.cs" />
+    <Compile Include="Migrations\201606141957581_correct code migration error attempt.Designer.cs">
+      <DependentUpon>201606141957581_correct code migration error attempt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606142001462_updated employee model to add user name.cs" />
+    <Compile Include="Migrations\201606142001462_updated employee model to add user name.Designer.cs">
+      <DependentUpon>201606142001462_updated employee model to add user name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606151512500_created schedule model.cs" />
+    <Compile Include="Migrations\201606151512500_created schedule model.Designer.cs">
+      <DependentUpon>201606151512500_created schedule model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606151720166_safety.cs" />
+    <Compile Include="Migrations\201606151720166_safety.Designer.cs">
+      <DependentUpon>201606151720166_safety.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AlcoholInv.cs" />
+    <Compile Include="Models\Employees.cs" />
     <Compile Include="Models\FoodInv.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OrderMenu.cs" />
+    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\SupplyInv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -448,6 +472,19 @@
     <Content Include="Views\FoodInvs\Edit.cshtml" />
     <Content Include="Views\FoodInvs\Index.cshtml" />
     <Content Include="Views\Scheduler\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Schedules\Create.cshtml" />
+    <Content Include="Views\Schedules\Delete.cshtml" />
+    <Content Include="Views\Schedules\Details.cshtml" />
+    <Content Include="Views\Schedules\Edit.cshtml" />
+    <Content Include="Views\Schedules\Index.cshtml" />
+    <Content Include="Views\Shared\_Admin_Layout.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Shared\_Employee_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -477,6 +514,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606131612117_correct code migration.resx">
       <DependentUpon>201606131612117_correct code migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606141948266_created employee model.resx">
+      <DependentUpon>201606141948266_created employee model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606141957581_correct code migration error attempt.resx">
+      <DependentUpon>201606141957581_correct code migration error attempt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606142001462_updated employee model to add user name.resx">
+      <DependentUpon>201606142001462_updated employee model to add user name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606151512500_created schedule model.resx">
+      <DependentUpon>201606151512500_created schedule model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606151720166_safety.resx">
+      <DependentUpon>201606151720166_safety.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
