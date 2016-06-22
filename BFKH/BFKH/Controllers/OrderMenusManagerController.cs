@@ -10,107 +10,107 @@ using BFKH.Models;
 
 namespace BFKH.Controllers
 {
-    public class EmployeesController : Controller
+    public class OrderMenusManagerController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Employees
+        // GET: OrderMenusManager
         public ActionResult Index()
         {
-            return View(db.Employees.ToList());
+            return View(db.OrderMenus.ToList());
         }
 
-        // GET: Employees/Details/5
+        // GET: OrderMenusManager/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employees employees = db.Employees.Find(id);
-            if (employees == null)
+            OrderMenu orderMenu = db.OrderMenus.Find(id);
+            if (orderMenu == null)
             {
                 return HttpNotFound();
             }
-            return View(employees);
+            return View(orderMenu);
         }
 
-        // GET: Employees/Create
+        // GET: OrderMenusManager/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Employees/Create
+        // POST: OrderMenusManager/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,Name,Start_Date,End_Date,Wage,Phone,Email,User_Name")] Employees employees)
+        public ActionResult Create([Bind(Include = "Id,Dish,Description,Price")] OrderMenu orderMenu)
         {
             if (ModelState.IsValid)
             {
-                db.Employees.Add(employees);
+                db.OrderMenus.Add(orderMenu);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(employees);
+            return View(orderMenu);
         }
 
-        // GET: Employees/Edit/5
+        // GET: OrderMenusManager/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employees employees = db.Employees.Find(id);
-            if (employees == null)
+            OrderMenu orderMenu = db.OrderMenus.Find(id);
+            if (orderMenu == null)
             {
                 return HttpNotFound();
             }
-            return View(employees);
+            return View(orderMenu);
         }
 
-        // POST: Employees/Edit/5
+        // POST: OrderMenusManager/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,Name,Start_Date,End_Date,Wage,Phone,Email,User_Name")] Employees employees)
+        public ActionResult Edit([Bind(Include = "Id,Dish,Description,Price")] OrderMenu orderMenu)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(employees).State = EntityState.Modified;
+                db.Entry(orderMenu).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(employees);
+            return View(orderMenu);
         }
 
-        // GET: Employees/Delete/5
+        // GET: OrderMenusManager/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employees employees = db.Employees.Find(id);
-            if (employees == null)
+            OrderMenu orderMenu = db.OrderMenus.Find(id);
+            if (orderMenu == null)
             {
                 return HttpNotFound();
             }
-            return View(employees);
+            return View(orderMenu);
         }
 
-        // POST: Employees/Delete/5
+        // POST: OrderMenusManager/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Employees employees = db.Employees.Find(id);
-            db.Employees.Remove(employees);
+            OrderMenu orderMenu = db.OrderMenus.Find(id);
+            db.OrderMenus.Remove(orderMenu);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

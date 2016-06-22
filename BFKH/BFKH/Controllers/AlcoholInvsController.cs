@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Net.Mail;
 using BFKH.Models;
 
 namespace BFKH.Controllers
@@ -84,6 +85,33 @@ namespace BFKH.Controllers
             {
                 db.Entry(alcoholInv).State = EntityState.Modified;
                 db.SaveChanges();
+
+                //if (alcoholInv.Quantity <= alcoholInv.purchaseLevel)
+                //{
+                //    var fromAddress = new MailAddress("placeemailaddresshere@gmail.com", "Best Friendz");
+                //    var toAddress = new MailAddress("placeemailaddresshere@gmail.comm", "Manager");
+                //    const string fromPassword = "actualpasswordforsenderaddresssgoeshere";
+                //    const string subject = "Low Beverage Inventory, please place order immediately";
+                //    const string body = "Please check your inventory, item(s) have reached restock level, place order.";
+
+                //    var smtp = new SmtpClient
+                //    {
+                //        Host = "smtp.gmail.com",
+                //        Port = 587,
+                //        EnableSsl = true,
+                //        DeliveryMethod = SmtpDeliveryMethod.Network,
+                //        UseDefaultCredentials = false,
+                //        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                //    };
+                //    using (var message = new MailMessage(fromAddress, toAddress)
+                //    {
+                //        Subject = subject,
+                //        Body = body
+                //    })
+                //    {
+                //        smtp.Send(message);
+                //    }
+                //}
                 return RedirectToAction("Index");
             }
             return View(alcoholInv);

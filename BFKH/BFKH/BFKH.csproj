@@ -239,6 +239,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderMenusController.cs" />
+    <Compile Include="Controllers\OrderMenusManagerController.cs" />
     <Compile Include="Controllers\SchedulerController.cs" />
     <Compile Include="Controllers\SchedulesController.cs" />
     <Compile Include="Controllers\SupplyInvsController.cs" />
@@ -485,6 +486,11 @@
     <Content Include="Views\Shared\_Admin_Layout.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Shared\_Employee_Layout.cshtml" />
+    <Content Include="Views\OrderMenusManager\Create.cshtml" />
+    <Content Include="Views\OrderMenusManager\Delete.cshtml" />
+    <Content Include="Views\OrderMenusManager\Details.cshtml" />
+    <Content Include="Views\OrderMenusManager\Edit.cshtml" />
+    <Content Include="Views\OrderMenusManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
